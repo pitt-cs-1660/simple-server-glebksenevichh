@@ -40,5 +40,6 @@ FROM python:3.12-slim AS final
     EXPOSE 8000
 
     # Set CMD to run FastAPI server on 0.0.0.0:8000
-    CMD ["uvicorn", "cc_simple_server.server:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
+    #CMD ["uvicorn", "cc_simple_server.server:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
+    CMD ["uvicorn", "cc_simple_server.server:app", "--host", "0.0.0.0", "--port", "8000"]
 
